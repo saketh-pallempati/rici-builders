@@ -1,36 +1,97 @@
-import React, { useRef } from 'react'
-import TopNav from '../TopNav/TopNav'
-import MainMenu from '../MainMenu/MainMenu'
-import SearchBar from '../SearchBar/SearchBar'
-import useVerticalScrollEvent from '@/hooks/useVerticalScrollEvent'
+import React, { useState, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import useVerticalScrollEvent from "@/hooks/useVerticalScrollEvent";
 
-type Props = {}
+type Props = {};
 
 const Header = (props: Props) => {
-
-  const stickyRef = useRef<HTMLDivElement>(null);
-
-  useVerticalScrollEvent((evt:any) => {
-    if(evt.currentTarget.scrollY >= 172) {
-      (stickyRef.current as HTMLDivElement).classList.add('navbar_fixed');
-      return;
-    } 
-    if(evt.currentTarget.scrollY <= 42) {
-      (stickyRef.current as HTMLDivElement).classList.remove('navbar_fixed');
-      return;
+  const [isVisible, setIsVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const lastScrollY = useRef(0);
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    const scrollDifference = Math.abs(currentScrollY - lastScrollY.current);
+    
+    // Update background based on scroll position
+    setIsScrolled(currentScrollY > 50);
+    
+    // Only update if scroll difference is significant enough (reduces jitter)
+    if (scrollDifference < 5) return;
+    
+    if (currentScrollY < 50) {
+      // Always show navbar when near top
+      setIsVisible(true);
+    } else if (currentScrollY < lastScrollY.current) {
+      // Scrolling up - show navbar
+      setIsVisible(true);
+    } else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+      // Scrolling down - hide navbar (only after scrolling past 100px)
+      setIsVisible(false);
     }
     
-  });
+    lastScrollY.current = currentScrollY;
+  };
 
-  
+  useVerticalScrollEvent(handleScroll);
+
   return (
-    <header className="header_area" ref={stickyRef}>
-        <TopNav />
-        <MainMenu />
-        
-        <SearchBar />
-      </header>
-  )
-}
+    <header className={`main_menu ${isVisible ? 'navbar-visible' : 'navbar-hidden'} ${isScrolled ? 'scrolled' : ''}`}>
+      <nav className="navbar navbar-expand-lg navbar-light">
+        <div className="container">
+          <Link className="navbar-brand logo_h" href="/">
+            <Image src="/logo.jpg" alt="" width={69} height={69} />
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+          </button>
 
-export default Header
+          <div
+            className="collapse navbar-collapse offset"
+            id="navbarSupportedContent"
+          >
+            <ul className="nav navbar-nav menu_nav ml-auto">
+              <li className="nav-item active">
+                <Link className="nav-link" href="/">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="#about-us">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="#services">
+                  Services
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="#projects">
+                  Projects
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="#contact">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;

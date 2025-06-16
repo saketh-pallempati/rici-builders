@@ -108,9 +108,8 @@
 	}
 	.nav{
 		padding: 0px 0px;
-	}
-	.header_area + section, .header_area + row, .header_area + div {
-		margin-top: 117px;
+	}	.header_area + section, .header_area + row, .header_area + div {
+		margin-top: 140px;
 	}
 	.header_area .navbar .nav .nav-item .nav-link{
 		line-height: 40px;
@@ -134,9 +133,8 @@
 	}
 	.header_area .navbar .nav .nav-item {
 		margin-right: 0px;
-	}
-	.header_area + section, .header_area + row, .header_area + div {
-		margin-top: 116px;
+	}	.header_area + section, .header_area + row, .header_area + div {
+		margin-top: 140px;
 	}
 	/* End Main Menu Area css
 	============================================================================================ */
@@ -202,9 +200,8 @@
 
 
 @media (max-width:767px){
-
 	.header_area + section, .header_area + row, .header_area + div {
-		margin-top: 80px;
+		margin-top: 95px;
 	}
 
 
@@ -263,9 +260,8 @@
 @media (max-width:575px){
 	.top_menu {
 		display: none;
-	}
-	.header_area + section, .header_area + row, .header_area + div {
-		margin-top: 71px;
+	}	.header_area + section, .header_area + row, .header_area + div {
+		margin-top: 85px;
 	}
     /* Home Banner Area css
     ============================================================================================ */

@@ -5,11 +5,11 @@ type Props = {}
 
 const Services = (props: Props) => {
   return (
-    <section className="service-area area-padding">
+    <section className="service-area area-padding" id="services">
         <div className="container">
           <div className="area-heading">
             <h3 className="line">What We Provide</h3>
-            <p>Together female let signs for for fish fowl may first.</p>
+            <p>Crafting exceptional structures with precision engineering and innovative design excellence.</p>
           </div>
           <div className="row">
             <div className="col-md-6 col-xl-3">
@@ -19,11 +19,11 @@ const Services = (props: Props) => {
                   
                 </div>
                 <div className="service-content">
-                  <h5>Architecture Design</h5>
+                  <h5>Residential Construction</h5>
                   <p>
-                    You{`'`}re which creepeth were yielding kind, divide sixten
-                    po gatherin all first fill Seed wherein life. Years one
-                    fifth{" "}
+                    Building dream homes with quality craftsmanship, modern designs, 
+                    and sustainable materials to create comfortable living spaces 
+                    for families.
                   </p>
                 </div>
               </div>
@@ -35,11 +35,11 @@ const Services = (props: Props) => {
                   <Image width={83} height={83} src="/images/i2.png.webp" alt="" />
                 </div>
                 <div className="service-content">
-                  <h5>Building Construction</h5>
+                  <h5>Commercial Construction</h5>
                   <p>
-                    You{`'`}re which creepeth were yielding kind, divide sixten
-                    po gatherin all first fill Seed wherein life. Years one
-                    fifth{" "}
+                    Delivering robust commercial buildings, offices, and retail spaces 
+                    with cutting-edge technology and efficient project management 
+                    solutions.
                   </p>
                 </div>
               </div>
@@ -53,9 +53,9 @@ const Services = (props: Props) => {
                 <div className="service-content">
                   <h5>Building Renovation</h5>
                   <p>
-                    You{`'`}re which creepeth were yielding kind, divide sixten
-                    po gatherin all first fill Seed wherein life. Years one
-                    fifth{" "}
+                    Transforming existing structures with modern upgrades, 
+                    energy-efficient solutions, and enhanced functionality 
+                    while preserving architectural character.
                   </p>
                 </div>
               </div>
@@ -67,11 +67,11 @@ const Services = (props: Props) => {
                   <Image width={82} height={82} src="/images/i4.png.webp" alt="" />
                 </div>
                 <div className="service-content">
-                  <h5>Building Maintenance</h5>
+                  <h5>Interior Works</h5>
                   <p>
-                    You{`'`}re which creepeth were yielding kind, divide sixten
-                    po gatherin all first fill Seed wherein life. Years one
-                    fifth{" "}
+                    Creating stunning interior spaces with custom designs, 
+                    premium finishes, and functional layouts that reflect 
+                    your style and needs.
                   </p>
                 </div>
               </div>

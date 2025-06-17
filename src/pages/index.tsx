@@ -3,7 +3,6 @@ import Header from "@/components/Header/Header";
 import HomeBanner from "@/components/HomeBanner/HomeBanner";
 import About from "@/components/About/About";
 import Services from "@/components/Services/Services";
-import Stats from "@/components/Stats/Stats";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import Footer from "@/components/Footer/Footer";
@@ -30,7 +29,6 @@ export default function HomePage() {
       <HomeBanner />
       <About />
       <Services />
-      <Stats />
       <Portfolio />
       <Testimonials />
       <Footer />

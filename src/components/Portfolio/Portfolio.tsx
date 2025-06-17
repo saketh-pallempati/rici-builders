@@ -3,95 +3,119 @@ import React from "react";
 
 const Portfolio = () => {
   return (
-    <section className="portfolio_area area-padding" id="projects">
+    <section className="modern-portfolio" id="projects">
       <div className="container">
-        {" "}
-        <div className="area-heading">
-          <h3 className="line">Our Projects</h3>
-          <p>We build every project on these core principles:</p>
-          <div className="filters portfolio-filter">
-            <ul>
-              <li data-filter=".popular">Experienced Team</li>
-              <li data-filter=".latest">Quality Materials</li>
-              <li data-filter=".following">On-Time Completion</li>
-              <li data-filter=".upcoming">Transparent Pricing</li>
-              <li data-filter=".satisfaction">Customer Satisfaction</li>
-            </ul>
+        <div className="portfolio-header">
+          <div className="title-container">
+            <h2 className="portfolio-title">Our Projects</h2>
+            <div className="title-accent"></div>
+          </div>{" "}
+          <p className="portfolio-subtitle">
+            Every project we deliver is built on these core principles:
+          </p>
+          <div className="principles-grid">
+            {" "}
+            <div className="principle-card">
+              <div className="principle-icon">👥</div>
+              <span>Expert Team</span>
+            </div>
+            <div className="principle-card">
+              <div className="principle-icon">⚡</div>
+              <span>Premium Materials</span>
+            </div>
+            <div className="principle-card">
+              <div className="principle-icon">⏰</div>
+              <span>Timely Delivery</span>
+            </div>
+            <div className="principle-card">
+              <div className="principle-icon">💎</div>
+              <span>Transparent Pricing</span>
+            </div>
+            <div className="principle-card">
+              <div className="principle-icon">⭐</div>
+              <span>Client Satisfaction</span>
+            </div>
           </div>
-        </div>
-        <div className="filters-content">
-          <div className="row portfolio-grid">
-            <div className="col-lg-6 col-md-6 all following">
-              <div className="single_portfolio">
-                <Image
-                  width={555}
-                  height={419}
-                  className="img-fluid w-100"
-                  src="/projects/1.jpg"
-                  alt=""
-                />
-                <div className="short_info">
-                  <p>residential</p>
-                  <h4>
-                    <a href="portfolio-details.html">
-                      Residential Complex, OMR
-                    </a>
+        </div>{" "}
+        <div className="projects-grid">
+          <div className="project-card">
+            <div className="project-image">
+              <Image
+                fill
+                src="/projects/1.png"
+                alt="Construction project in Madhanandapuram"
+                style={{ objectFit: "cover" }}
+              />{" "}
+              <div className="image-overlay">
+                <div className="overlay-content">
+                  <span className="project-category">Madhanandapuram</span>
+                  <h4 className="project-title">
+                    Residential Construction
+                    <br />
+                    Complete Build
                   </h4>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6 all latest popular upcoming">
-              <div className="single_portfolio">
-                <Image
-                  width={555}
-                  height={419}
-                  className="img-fluid w-100"
-                  src="/projects/2.jpg"
-                  alt=""
-                />
-                <div className="short_info">
-                  <p>commercial</p>
-                  <h4>
-                    <a href="portfolio-details.html">
-                      Commercial store, Anna Nagar
-                    </a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6 all latest following">
-              <div className="single_portfolio">
-                <Image
-                  width={555}
-                  height={419}
-                  className="img-fluid w-100"
-                  src="/projects/3.jpg"
-                  alt=""
-                />
-                <div className="short_info">
-                  <p>renovation</p>
-                  <h4>
-                    <a href="portfolio-details.html">
-                      House Renovation, T. Nagar
-                    </a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6 all latest upcoming">
-              <div className="single_portfolio">
-                <Image
-                  width={555}
-                  height={419}
-                  className="img-fluid w-100"
-                  src="/projects/4.jpg"
-                  alt=""
-                />
+          </div>
 
-                <div className="short_info">
-                  <p>luxury</p>
-                  <h4>
-                    <a href="portfolio-details.html">Luxury House, Guindy</a>
+          <div className="project-card">
+            <div className="project-image">
+              <Image
+                fill
+                src="/projects/2.png"
+                alt="Interior designing project in Iyyappanthangal"
+                style={{ objectFit: "cover" }}
+              />{" "}
+              <div className="image-overlay">
+                <div className="overlay-content">
+                  <span className="project-category">Iyyappanthangal</span>
+                  <h4 className="project-title">
+                    Residential Building
+                    <br />
+                    Interior Design
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <div className="project-image">
+              <Image
+                fill
+                src="/projects/3.png"
+                alt="Interior and exterior work in Nungambakkam"
+                style={{ objectFit: "cover" }}
+              />{" "}
+              <div className="image-overlay">
+                <div className="overlay-content">
+                  <span className="project-category">Nungambakkam</span>
+                  <h4 className="project-title">
+                    Property Renovation
+                    <br />
+                    Interior & Exterior
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <div className="project-image">
+              <Image
+                fill
+                src="/projects/4.png"
+                alt="Commercial interior and exterior in Choolaimedu"
+                style={{ objectFit: "cover" }}
+              />{" "}
+              <div className="image-overlay">
+                <div className="overlay-content">
+                  <span className="project-category">Choolaimedu</span>
+                  <h4 className="project-title">
+                    Commercial Development
+                    <br />
+                    Interior & Exterior
                   </h4>
                 </div>
               </div>

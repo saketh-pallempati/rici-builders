@@ -12,35 +12,34 @@ const Header = (props: Props) => {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
     const scrollDifference = Math.abs(currentScrollY - lastScrollY.current);
-    
-    // Update background based on scroll position
+
     setIsScrolled(currentScrollY > 50);
-    
-    // Only update if scroll difference is significant enough (reduces jitter)
+
     if (scrollDifference < 5) return;
-    
+
     if (currentScrollY < 50) {
-      // Always show navbar when near top
       setIsVisible(true);
     } else if (currentScrollY < lastScrollY.current) {
-      // Scrolling up - show navbar
       setIsVisible(true);
     } else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-      // Scrolling down - hide navbar (only after scrolling past 100px)
       setIsVisible(false);
     }
-    
+
     lastScrollY.current = currentScrollY;
   };
 
   useVerticalScrollEvent(handleScroll);
 
   return (
-    <header className={`main_menu ${isVisible ? 'navbar-visible' : 'navbar-hidden'} ${isScrolled ? 'scrolled' : ''}`}>
+    <header
+      className={`main_menu ${isVisible ? "navbar-visible" : "navbar-hidden"} ${
+        isScrolled ? "scrolled" : ""
+      }`}
+    >
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
           <Link className="navbar-brand logo_h" href="/">
-            <Image src="/logo.jpg" alt="" width={69} height={69} />
+            <Image src="/logo.jpg" alt="" width={122} height={65}/>
           </Link>
           <button
             className="navbar-toggler"

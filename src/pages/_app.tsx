@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import '@/styles/globals.css'
 import '@/styles/sintec.css'
 import '@/styles/responsive.css'
+import '@/styles/modern-portfolio.css'
 
 const roboto = Roboto({
   weight: ['400', '700'],

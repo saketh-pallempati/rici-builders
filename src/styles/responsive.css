@@ -319,14 +319,15 @@
 	.portfolio_area .filters ul li {
 		margin-right: 17px;
 		margin-bottom: 10px;
-	}
-	.single-testimonial.item.d-flex.flex-row {
-		display: inline-block !important;
+	}	.single-testimonial.item.d-flex.flex-row {
+		display: block !important;
+		text-align: center;
 	}
 	.single-testimonial .thumb {
-		height: 95px;
-		width: 95px;
-		margin-bottom: 30px;
+		height: 80px;
+		width: 80px;
+		margin: 0 auto 20px;
+		display: block;
 	}
 	.single_portfolio .short_info {
 		left: 10px;

@@ -39,7 +39,7 @@ const Header = (props: Props) => {
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
           <Link className="navbar-brand logo_h" href="/">
-            <Image src="/logo.jpg" alt="" width={122} height={65}/>
+            <Image src="/logo.svg" alt="" width={122} height={65} priority />
           </Link>
           <button
             className="navbar-toggler"

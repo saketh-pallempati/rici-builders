@@ -62,7 +62,7 @@ const About = (props: Props) => {
                 </div>
                 <div className="single-number">
                   <h5>
-                    <span className="counter">60</span>+
+                    <span className="counter">20</span>+
                   </h5>
                   <p>Full time Employees</p>
                 </div>
@@ -79,11 +79,14 @@ const About = (props: Props) => {
 
         {/* Services Section */}
         <div className="row services-section">
-          <div className="col-12">            <div className="number-content services-content">
+          <div className="col-12">
+            {" "}
+            <div className="number-content services-content">
               <h4 className="services-title">Our Comprehensive Services</h4>
               <p className="services-subtitle">
-                We provide end-to-end construction solutions with professional expertise, 
-                modern technology, and unwavering commitment to quality and timely delivery.
+                We provide end-to-end construction solutions with professional
+                expertise, modern technology, and unwavering commitment to
+                quality and timely delivery.
               </p>
 
               {/* Services Grid */}
@@ -100,10 +103,12 @@ const About = (props: Props) => {
                   APP for Realtime Project Tracking
                 </div>
 
-                <div className="service-item">On-Time Handover</div>
+                <div className="service-item">
+                  Guaranteed On-Time Project Delivery
+                </div>
 
                 <div className="service-item">
-                  One Stop Solution: Design + Construction + Interior
+                  Complete Solution: Design + Build + Interior
                 </div>
               </div>
             </div>

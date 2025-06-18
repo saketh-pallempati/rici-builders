@@ -4,6 +4,7 @@ import '@/styles/globals.css'
 import '@/styles/sintec.css'
 import '@/styles/responsive.css'
 import '@/styles/modern-portfolio.css'
+import '@/styles/quote-modal.css'
 
 const roboto = Roboto({
   weight: ['400', '700'],

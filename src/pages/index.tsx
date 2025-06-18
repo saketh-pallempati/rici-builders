@@ -23,7 +23,7 @@ export default function HomePage() {
           name="keywords"
           content="civil construction, residential construction, commercial construction, renovation, interior works, Chennai builders, Tamil Nadu construction"
         />
-        <link rel="icon" href="/logo.jpg" />
+        <link rel="icon" href="/logo.svg" />
       </Head>
       <Header />
       <HomeBanner />

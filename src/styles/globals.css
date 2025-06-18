@@ -45,23 +45,6 @@
   opacity: 0.8;
 }
 
-/* WhatsApp Button Animation */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-
-.whatsapp-float {
-  animation: pulse 2s infinite;
-}
-
 /* Responsive Footer */
 @media (max-width: 768px) {
   .footer-area {

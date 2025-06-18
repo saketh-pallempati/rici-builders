@@ -16,10 +16,11 @@ const Footer = (props: Props) => {
               <div className="single-footer-widget">
                 <div className="footer-logo">
                   <Image
-                    src="/logo.jpg"
+                    src="/logo.svg"
                     alt="RICI Builders"
                     width={120}
                     height={60}
+                    priority
                   />
                 </div>
                 <h6>RICI Builders</h6>
@@ -82,7 +83,7 @@ const Footer = (props: Props) => {
                 <h6>Find Us</h6>
                 <div className="footer-map">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0314583403106!2d80.137123!3d13.0336687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261ac9d217a13%3A0x20b5e105a1d5f004!2sSri%20Maheswari%20Flats%2C%20Adithanar%20Nagar%2C%20Venugopal%20Nagar%2C%20Iyyappanthangal%2C%20Chennai%2C%20Tamil%20Nadu%20600056!5e0!3m2!1sen!2sin!4v1750085957111!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3887.0317834219636!2d80.137186!3d13.033648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDAyJzAxLjEiTiA4MMKwMDgnMTMuOSJF!5e0!3m2!1sen!2sin!4v1750174620656!5m2!1sen!2sin"
                     width="100%"
                     height="200"
                     loading="lazy"

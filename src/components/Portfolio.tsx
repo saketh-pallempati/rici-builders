@@ -13,29 +13,7 @@ const Portfolio = () => {
           <p className="portfolio-subtitle">
             Every project we deliver is built on these core principles:
           </p>
-          <div className="principles-grid">
-            {" "}
-            <div className="principle-card">
-              <div className="principle-icon">👥</div>
-              <span>Expert Team</span>
-            </div>
-            <div className="principle-card">
-              <div className="principle-icon">⚡</div>
-              <span>Premium Materials</span>
-            </div>
-            <div className="principle-card">
-              <div className="principle-icon">⏰</div>
-              <span>Timely Delivery</span>
-            </div>
-            <div className="principle-card">
-              <div className="principle-icon">💎</div>
-              <span>Transparent Pricing</span>
-            </div>
-            <div className="principle-card">
-              <div className="principle-icon">⭐</div>
-              <span>Client Satisfaction</span>
-            </div>
-          </div>
+
         </div>{" "}
         <div className="projects-grid">
           <div className="project-card">

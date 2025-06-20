@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { sendQuoteEmail } from "../../utils/emailService";
+import { sendQuoteEmail } from "../utils/emailService";
 
 interface QuoteFormData {
   name: string;
@@ -44,13 +44,14 @@ const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose }) => {
     "Residential Home",
     "Commercial Building",
     "Renovation",
-    "Extension",
-    "Custom Build",
+    "Interior & Exterior",
+    "Uplifting & Shifting",
+    "Waterproofing",
     "Other",
   ];
 
   const budgetRanges = [
-    "0 - ₹5,00,000",
+    "Below ₹5,00,000",
     "₹5,00,000 - ₹10,00,000",
     "₹10,00,000 - ₹25,00,000",
     "₹25,00,000 - ₹50,00,000",
@@ -103,10 +104,10 @@ const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose }) => {
   };
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+    const value = e.target.value.replace(/\D/g, ""); // Remove non-digits
     if (value.length <= 10) {
       setFormData((prev) => ({ ...prev, phone: value }));
-      
+
       if (errors.phone) {
         setErrors((prev) => ({ ...prev, phone: "" }));
       }

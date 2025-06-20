@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
 import { Roboto } from "next/font/google";
+import '@/styles/footer.css'
 import '@/styles/globals.css'
-import '@/styles/sintec.css'
 import '@/styles/responsive.css'
 import '@/styles/modern-portfolio.css'
 import '@/styles/quote-modal.css'

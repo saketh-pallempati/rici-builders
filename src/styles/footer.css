@@ -1,0 +1,81 @@
+/* Custom Footer Enhancements */
+.footer-area {
+  padding-bottom: 30px;
+}
+
+.footer-area .single-footer-widget {
+  margin-bottom: 40px;
+}
+
+.footer-area .single-footer-widget h6 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-area .single-footer-widget h6:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #e22104;
+}
+
+.footer-area .single-footer-widget p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.footer-area .footer-nav li a {
+  transition: all 0.3s ease;
+  display: block;
+  padding: 5px 0;
+}
+
+.footer-area .footer-nav li a:hover {
+  padding-left: 10px;
+  color: #e22104;
+}
+
+.footer-area .header_social li a:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-area {
+    padding-top: 60px;
+  }
+  
+  .footer-area .single-footer-widget {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .footer-area .header_social {
+    justify-content: center;
+  }
+  
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-area .single-footer-widget h6 {
+    font-size: 16px;
+  }
+  
+  .footer-area .single-footer-widget p,
+  .footer-area .footer-nav li a {
+    font-size: 13px;
+  }
+}

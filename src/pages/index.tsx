@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Header from "@/components/Header/Header";
-import HomeBanner from "@/components/HomeBanner/HomeBanner";
-import About from "@/components/About/About";
-import Services from "@/components/Services/Services";
-import Portfolio from "@/components/Portfolio/Portfolio";
-import Testimonials from "@/components/Testimonials/Testimonials";
-import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header";
+import HomeBanner from "@/components/HomeBanner";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Portfolio from "@/components/Portfolio";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -30,7 +29,6 @@ export default function HomePage() {
       <About />
       <Services />
       <Portfolio />
-      <Testimonials />
       <Footer />
     </>
   );

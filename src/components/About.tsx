@@ -78,37 +78,37 @@ const About = (props: Props) => {
         </div>
 
         {/* Services Section */}
-        <div className="row services-section">
+        <div className="row services-section py-5">
           <div className="col-12">
             {" "}
             <div className="number-content services-content">
-              <h4 className="services-title">Our Comprehensive Services</h4>
+              <h4 className="services-title">About us</h4>
               <p className="services-subtitle">
                 We provide end-to-end construction solutions with professional
                 expertise, modern technology, and unwavering commitment to
                 quality and timely delivery.
               </p>
-
-              {/* Services Grid */}
-              <div className="services-grid">
-                <div className="service-item">
-                  Bank Loan & Building Approval Support
+              <div className="principles-grid">
+                {" "}
+                <div className="principle-card">
+                  <div className="principle-icon">👥</div>
+                  <span> Bank Loan & Building Approval Support</span>
                 </div>
-
-                <div className="service-item">
-                  Dedicated Full Time Site Engineer
+                <div className="principle-card">
+                  <div className="principle-icon">⚡</div>
+                  <span> Dedicated Full Time Site Engineer</span>
                 </div>
-
-                <div className="service-item">
-                  APP for Realtime Project Tracking
+                <div className="principle-card">
+                  <div className="principle-icon">⏰</div>
+                  <span> Guaranteed On-Time Project Delivery</span>
                 </div>
-
-                <div className="service-item">
-                  Guaranteed On-Time Project Delivery
+                <div className="principle-card">
+                  <div className="principle-icon">💎</div>
+                  <span> Quality Material Procurement</span>
                 </div>
-
-                <div className="service-item">
-                  Complete Solution: Design + Build + Interior
+                <div className="principle-card">
+                  <div className="principle-icon">⭐</div>
+                  <span> Complete Solution: Design + Build + Interior</span>
                 </div>
               </div>
             </div>

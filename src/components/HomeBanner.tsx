@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import QuoteButton from "../QuoteButton/QuoteButton";
+import QuoteButton from "./QuoteButton";
 
 type Props = {};
 

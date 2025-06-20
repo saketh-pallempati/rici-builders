@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import QuoteModal from "../QuoteModal/QuoteModal";
+import QuoteModal from "./QuoteModal";
 
 interface QuoteButtonProps {
   text?: string;

@@ -30,17 +30,18 @@ const QuoteButton: React.FC<QuoteButtonProps> = ({
     const sizeClass = size === "small" ? "small" : size === "large" ? "large" : "";
     return `${baseClass} ${sizeClass} ${className}`.trim();
   };
-
   return (
     <>
       <button
         onClick={handleQuoteClick}
-        className={getButtonClass()}
+        className={`${getButtonClass()} enhanced-quote-btn`}
         type="button"
         aria-label="Get a Quote"
         style={{ cursor: "pointer" }}
       >
-        {text}
+        <span className="btn-bg"></span>
+        <span className="btn-text">{text}</span>
+        <span className="btn-icon">✦</span>
       </button>
       
       <QuoteModal 

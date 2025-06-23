@@ -1,0 +1,201 @@
+/* QuoteButton Component Styles */
+/* Isolated styles for the enhanced quote button to avoid conflicts with other buttons */
+
+.enhanced-quote-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  background: linear-gradient(135deg, #52c5fd, #4cd3e3);
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 8px 25px rgba(82, 197, 253, 0.3);
+  z-index: 1;
+}
+
+/* Button background overlay */
+.enhanced-quote-btn .btn-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #4cd3e3, #52c5fd);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: -1;
+}
+
+/* Button text */
+.enhanced-quote-btn .btn-text {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+/* Button icon */
+.enhanced-quote-btn .btn-icon {
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.enhanced-quote-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(82, 197, 253, 0.4);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.enhanced-quote-btn:hover .btn-bg {
+  opacity: 1;
+}
+
+.enhanced-quote-btn:hover .btn-text {
+  transform: translateX(-2px);
+}
+
+.enhanced-quote-btn:hover .btn-icon {
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Active/Focus states */
+.enhanced-quote-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 20px rgba(82, 197, 253, 0.4);
+}
+
+.enhanced-quote-btn:focus {
+  outline: none;
+  box-shadow: 0 8px 25px rgba(82, 197, 253, 0.3), 0 0 0 3px rgba(82, 197, 253, 0.2);
+}
+
+/* Primary variant (default) */
+.enhanced-quote-btn.primary-btn {
+  background: linear-gradient(135deg, #52c5fd, #4cd3e3);
+  box-shadow: 0 8px 25px rgba(82, 197, 253, 0.3);
+}
+
+.enhanced-quote-btn.primary-btn .btn-bg {
+  background: linear-gradient(135deg, #4cd3e3, #52c5fd);
+}
+
+.enhanced-quote-btn.primary-btn:hover {
+  box-shadow: 0 12px 35px rgba(82, 197, 253, 0.4);
+}
+
+/* Secondary variant */
+.enhanced-quote-btn.secondary-btn {
+  background: linear-gradient(135deg, #6c757d, #495057);
+  box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
+}
+
+.enhanced-quote-btn.secondary-btn .btn-bg {
+  background: linear-gradient(135deg, #495057, #6c757d);
+}
+
+.enhanced-quote-btn.secondary-btn:hover {
+  box-shadow: 0 12px 35px rgba(108, 117, 125, 0.4);
+}
+
+/* Size variants */
+.enhanced-quote-btn.small {
+  padding: 12px 24px;
+  font-size: 14px;
+  gap: 8px;
+}
+
+.enhanced-quote-btn.small .btn-icon {
+  font-size: 16px;
+}
+
+.enhanced-quote-btn.large {
+  padding: 20px 40px;
+  font-size: 18px;
+  gap: 16px;
+}
+
+.enhanced-quote-btn.large .btn-icon {
+  font-size: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .enhanced-quote-btn {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+  
+  .enhanced-quote-btn.small {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  
+  .enhanced-quote-btn.large {
+    padding: 18px 36px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enhanced-quote-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .enhanced-quote-btn.small {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  
+  .enhanced-quote-btn.large {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+}
+
+/* Animation for loading states (optional) */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 8px 25px rgba(82, 197, 253, 0.3);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(82, 197, 253, 0.5);
+  }
+  100% {
+    box-shadow: 0 8px 25px rgba(82, 197, 253, 0.3);
+  }
+}
+
+.enhanced-quote-btn.loading {
+  animation: pulse 2s infinite;
+  pointer-events: none;
+}
+
+/* Disabled state */
+.enhanced-quote-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+}
+
+.enhanced-quote-btn:disabled:hover {
+  transform: none;
+  box-shadow: 0 8px 25px rgba(82, 197, 253, 0.3);
+}

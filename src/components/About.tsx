@@ -77,17 +77,9 @@ const About = (props: Props) => {
           </div>{" "}
         </div>
 
-        {/* Services Section */}
         <div className="row services-section py-5">
           <div className="col-12">
             {" "}
-            <div className="number-content services-content">
-              <h4 className="services-title">About us</h4>
-              <p className="services-subtitle">
-                We provide end-to-end construction solutions with professional
-                expertise, modern technology, and unwavering commitment to
-                quality and timely delivery.
-              </p>
               <div className="principles-grid">
                 {" "}
                 <div className="principle-card">
@@ -111,7 +103,6 @@ const About = (props: Props) => {
                   <span> Complete Solution: Design + Build + Interior</span>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>

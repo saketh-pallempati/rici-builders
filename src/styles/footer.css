@@ -1,10 +1,25 @@
 /* Custom Footer Enhancements */
 .footer-area {
-  padding-bottom: 30px;
+  padding: 20px;
+}
+
+.footer-area .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-area .col-lg-4,
+.footer-area .col-md-6,
+.footer-area .col-md-12 {
+  display: flex;
 }
 
 .footer-area .single-footer-widget {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
 }
 
 .footer-area .single-footer-widget h6 {
@@ -21,7 +36,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background-color: #e22104;
+  background-color: #003292;
 }
 
 .footer-area .single-footer-widget p {
@@ -37,7 +52,7 @@
 
 .footer-area .footer-nav li a:hover {
   padding-left: 10px;
-  color: #e22104;
+  color: #003292;
 }
 
 .footer-area .header_social li a:hover {
@@ -59,14 +74,6 @@
   .footer-area .header_social {
     justify-content: center;
   }
-  
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    bottom: 15px;
-    right: 15px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -78,4 +85,125 @@
   .footer-area .footer-nav li a {
     font-size: 13px;
   }
+}
+
+/* Footer Social Links */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.footer-social .social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #888888;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-social .social-link:hover {
+  background: #003292;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.footer-social .social-link i {
+  font-size: 16px;
+}
+
+/* Contact Info Styles */
+.footer-nav.contact-info li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  color: #888888;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-nav.contact-info li i {
+  color: #003292;
+  margin-right: 12px;
+  margin-top: 3px;
+  min-width: 16px;
+  font-size: 14px;
+}
+
+.footer-nav.contact-info li span {
+  color: #888888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav.contact-info li span:hover {
+  color: #003292;
+}
+
+/* Footer Map */
+.footer-map {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  height: 150px;
+}
+
+.footer-map iframe {
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-map:hover iframe {
+  transform: scale(1.02);
+}
+
+.footer-link {
+  color: #888888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #003292;
+}
+
+/* Footer Copyright */
+.footer-bottom {
+  text-align: center;
+  color: #888888;
+  font-size: 14px;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  color: #fff;
+  text-decoration: none;
 }

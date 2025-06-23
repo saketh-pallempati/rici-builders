@@ -24,7 +24,6 @@ export default function HomePage() {
         />
         <link rel="icon" href="/logo.svg" />
       </Head>
-      <Header />
       <HomeBanner />
       <About />
       <Services />

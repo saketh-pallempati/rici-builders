@@ -1,6 +1,5 @@
 import Image from "next/image";
-import React from "react";
-
+import { useState } from "react";
 type Props = {};
 
 interface ServiceItem {
@@ -63,38 +62,69 @@ const servicesData: ServiceItem[] = [
 ];
 
 const Services = (props: Props) => {
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
   return (
-    <section className="service-area py-5" id="services">
+    <section className="service-area py-5 professional-services" id="services">
+      <div className="services-bg-overlay"></div>
+      <div className="floating-elements">
+        {[...Array(4)].map((_, i) => (
+          <div key={i} className={`floating-element element-${i + 1}`}></div>
+        ))}
+      </div>
+
       <div className="container">
-        <div className="area-heading">
-          <h3 className="line">What We Provide</h3>
-          <p>
-            Crafting exceptional structures with precision engineering and
-            innovative design excellence.
-          </p>
+        <div className={`area-heading loaded`}>
+          <div className="heading-wrapper">
+            <div className="heading-accent"></div>
+            <h3 className="line services-main-title">
+              <span className="title-word">What</span>
+              <span className="title-word">We</span>
+              <span className="title-word highlight">Provide</span>
+            </h3>
+          </div>
         </div>
 
         <div className="row justify-content-center g-4">
-          {servicesData.map((service) => (
+          {servicesData.map((service, index) => (
             <div
               key={service.id}
               className="col-md-6 col-lg-4 col-xl-2-4 d-flex mb-4"
             >
-              <div className="single-service shadow-lg w-100">
-                <div className="bg-gradient-to-r h-1 w-100 mb-4"></div>
+              <div 
+                className={`single-service professional-card w-100 ${hoveredCard === service.id ? 'hovered' : ''}`}
+                onMouseEnter={() => setHoveredCard(service.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
+                {/* Card Background Effects */}
+                <div className="card-bg-gradient"></div>
+                <div className="card-shine"></div>
+                
                 <div className="service-icon">
-                  <div className="icon-wrapper">
+                  <div className="icon-wrapper professional-icon">
+                    <div className="icon-bg-effect"></div>
+                    <div className="icon-border"></div>
                     <Image
-                      width={40}
-                      height={40}
+                      width={60}
+                      height={60}
                       src={service.icon}
                       alt={service.alt}
+                      className="service-icon-img"
                     />
+                    <div className="icon-glow"></div>
                   </div>
                 </div>
+                
                 <div className="service-content">
-                  <h5>{service.title}</h5>
-                  <p>{service.description}</p>
+                  <h5 className="service-title">{service.title}</h5>
+                  <div className="title-separator"></div>
+                  <p className="service-description">{service.description}</p>
+                  
+                  {/* Service Number */}
+                  <div className="service-number">
+                    <span>{String(service.id).padStart(2, '0')}</span>
+                  </div>
                 </div>
               </div>
             </div>

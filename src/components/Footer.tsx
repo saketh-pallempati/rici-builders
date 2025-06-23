@@ -76,8 +76,7 @@ const Footer = (props: Props) => {
                   </li>
                 </ul>
               </div>
-            </div>{" "}
-            {/* Google Map */}
+            </div>{" "}            {/* Google Map */}
             <div className="col-lg-4 col-md-12 col-sm-12">
               <div className="single-footer-widget">
                 <h6>Find Us</h6>
@@ -85,7 +84,7 @@ const Footer = (props: Props) => {
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3887.0317834219636!2d80.137186!3d13.033648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDAyJzAxLjEiTiA4MMKwMDgnMTMuOSJF!5e0!3m2!1sen!2sin!4v1750174620656!5m2!1sen!2sin"
                     width="100%"
-                    height="200"
+                    height="150"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="RICI Builders Location"
@@ -104,7 +103,7 @@ const Footer = (props: Props) => {
                 <div className="footer-text">
                   <p>
                     &copy; {currentYear} <span>RICI Builders</span>. All rights
-                    reserved. | Designed with <i className="ti-heart"></i> by{" "}
+                    reserved. | Designed with {"<"}3 by{" "}
                     <a
                       href="https://github.com/saketh-pallempati"
                       target="_blank"

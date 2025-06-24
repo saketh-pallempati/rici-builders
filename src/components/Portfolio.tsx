@@ -15,49 +15,63 @@ const projectsData: Project[] = [
     image: "/projects/1.png",
     alt: "Construction project in Madhanandapuram",
     category: "Madhanandapuram",
-    title: "Residential Construction - Complete Build"
+    title: "Residential Construction - Complete Build",
   },
   {
     id: 2,
     image: "/projects/2.png",
     alt: "Interior designing project in Iyyappanthangal",
     category: "Iyyappanthangal",
-    title: "Residential Building - Interior Design"
+    title: "Residential Building - Interior Design",
   },
   {
     id: 3,
     image: "/projects/3.png",
     alt: "Interior and exterior work in Nungambakkam",
     category: "Nungambakkam",
-    title: "Property Renovation - Interior & Exterior"
+    title: "Property Renovation - Interior & Exterior",
   },
   {
     id: 4,
     image: "/projects/4.png",
     alt: "Commercial interior and exterior in Choolaimedu",
     category: "Choolaimedu",
-    title: "Commercial Development - Interior & Exterior"
+    title: "Commercial Development - Interior & Exterior",
   },
-   {
+  {
     id: 5,
     image: "/projects/5.png",
     alt: "Renovation project in Madhavaram",
     category: "Madhavaram",
-    title: "Renovation - Interior & Exterior"
+    title: "Renovation - Interior & Exterior",
   },
-   {
+  {
     id: 6,
     image: "/projects/6.png",
     alt: "Interior development project in Ayyapanthangal",
     category: "Ayyapanthangal",
-    title: "Interior Development - Living Room & Bedroom"
+    title: "Interior Development - Living Room & Bedroom",
   },
   {
     id: 7,
     image: "/projects/7.png",
     alt: "Interior works project in Ayyapanthangal",
     category: "Ayyapanthangal ",
-    title: "Interior works - Bathroom & Kitchen"
+    title: "Interior works - Bathroom & Kitchen",
+  },
+  {
+    id: 8,
+    image: "/projects/8.png",
+    alt: "Full construction project in Pothappatty Trichy",
+    category: "Pothappatty Trichy",
+    title: "Full Construction - Interior & Exterior",
+  },
+  {
+    id: 9,
+    image: "/projects/9.png",
+    alt: "Interior and exterior work in Poonamallee Chennai",
+    category: "Poonamallee",
+    title: "Full construction - Interior & Exterior",
   },
 ];
 
@@ -84,11 +98,11 @@ const Portfolio = () => {
                   alt={project.alt}
                   style={{ objectFit: "cover" }}
                 />{" "}
-                <div className="image-overlay">                  <div className="overlay-content">
+                <div className="image-overlay">
+                  {" "}
+                  <div className="overlay-content">
                     <span className="project-category">{project.category}</span>
-                    <h4 className="project-title">
-                      {project.title}
-                    </h4>
+                    <h4 className="project-title">{project.title}</h4>
                   </div>
                 </div>
               </div>
